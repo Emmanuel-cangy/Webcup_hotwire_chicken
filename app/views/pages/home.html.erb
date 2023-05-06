@@ -1,3 +1,4 @@
+
 <!-- -----------------------Navbar----------------------- -->
 <%= render "shared/navbar" %>
 
@@ -5,7 +6,8 @@
 <header>
   <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
   <%= image_tag("Header-img.png", :alt => "Header image") %>
-  <a href="">Save your Dreams</a>
+  <%= link_to "Save your Dreams", new_user_registration_path, id: "login-link" %>
+  <%# <a href="">Save your Dreams</a> %>
 </header>
 
 <main>
@@ -36,13 +38,20 @@
     </div>
   </article>
 
+  <!-- -----------------------Advert----------------------- -->
+
+  <article class="advert">
+    <%= image_tag("advert.jpg", :alt => "Woman suffering from daily nightmares") %>
+    <h3>"Are your nightmares affecting your daily life? Don't suffer in silence. Seek professional help today."</h3>
+  </article>
+
   <!-- -----------------------About----------------------- -->
 
   <article class="about">
     <div class="container d-flex justify-content-evenly flex-row-reverse flex-wrap">
-      <%= image_tag("user.png", :alt => "User browsing application") %>
+      <%= image_tag("brain.jpg", :alt => "User browsing application") %>
       <div class="content">
-        <h3>Introducing <span>Onirix</span> most advanced system</h3>
+        <h3>Introducing <span>Onyrix</span> most advanced system</h3>
         <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
       </div>
     </div>
@@ -113,3 +122,15 @@
     </div>
   </article>
 </main>
+
+<!-- -----------------------F.A.Q----------------------- -->
+
+<%# <footer>
+  <div class="content"> %>
+    <%# <%= image_tag("onyrix-white-logo.svg", :alt => "Onirix white logo", :class => "footer_logo") %>
+    <%# <div class="links"> %>
+      <%# <%= image_tag("facebook-logo.svg", :alt => "Facebook logo") %>
+      <%# <%= image_tag("instagram-logo.svg", :alt => "Instagram logo") %>
+    <%# </div> %>
+  <%# </div> %>
+<%# </footer> %>

@@ -4,12 +4,26 @@
   </svg>
 
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag("logo.svg", :alt => "Onirix logo") %>
+    <%= image_tag("onyrix-logo.png", :alt => "Onirix logo") %>
+  <% end %>
+
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag("IIR-logo.svg", :alt => "L'institut International des Rêves logo") %>
   <% end %>
 
   <ul>
-    <%= link_to new_user_session_path, id: "login-link" do %>
-      <li>Login</li>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} do%>
+        <li>
+          Log Out
+        </li>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path, id: "login-link" do %>
+        <li>
+          Login
+        </li>
+      <% end %>
     <% end %>
   </ul>
 </nav>
