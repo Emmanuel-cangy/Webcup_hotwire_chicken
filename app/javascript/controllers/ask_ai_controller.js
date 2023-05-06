@@ -6,7 +6,6 @@
 
     connect() {
       console.log('stimulus controller connected')
-      console.log(this.buttonTarget.se)
     }
 
     send(event) {
