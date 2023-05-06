@@ -9,6 +9,8 @@ body {
   overflow-x: hidden;
 }
 
+// ---------------------------- header ----------------------------
+
 header {
   margin: 32px 0 60px 0;
   display: flex;
@@ -42,6 +44,8 @@ header {
     border-radius: 8px;
   }
 }
+
+// ---------------------------- main ----------------------------
 
 main {
   margin-top: 32px;
@@ -80,12 +84,10 @@ main .features {
 }
 
 main .works, main .about {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   background-color: #E6E6FA;
   color: $primary-color;
-  padding: 30px 0;
+  padding: 42px 0;
   text-align: center;
 
   img {
@@ -110,15 +112,106 @@ main .works, main .about {
   }
 }
 
+
 main .about  {
   background-color: $primary-color;
   color: $white;
   border-bottom: 1px solid $white;
+  margin-bottom: 60px;
 }
 
+// ---------------------------- F.A.Q ----------------------------
+
+.frequently-asked-questions {
+  max-width: 540px;
+  margin: 0 auto;
+
+  .centerplease {
+    color: $white;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $white;
+  }
+}
+
+.faq {
+  color: $white;
+
+  .question {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    margin: 0 auto;
+    padding: 12px 20px 10px 0;
+    display: block;
+    cursor: pointer;
+  }
+
+  .answers {
+    font-size: 16px;
+    font-weight: regular;
+    padding: 0px 42px 10px 0;
+    margin: 0 0 7px 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: .7s ease;
+    -moz-transition: .7s ease;
+    -o-transition: .7s ease;
+    transition: .7s ease;
+  }
+
+  .questions:checked ~ .answers{
+    height: auto;
+    opacity: 1;
+    padding: 15px 42px 25px 0;
+  }
+
+  .a {
+    padding-top: 16px;
+    position: relative;
+    border-bottom: 1px solid $white;
+  }
+
+  .plus {
+    position: absolute;
+    right: 0;
+    margin: 10px 0 0 10px;
+    z-index: 5;
+    font-size: 1.8em;
+    line-height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+  }
+
+  .questions:checked ~ .plus {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .questions {
+    display: none;
+  }
+}
+
+
 // ---------------------------------------------------------
+
 @media screen and (min-width: 768px) {
   main .features {
+    margin-bottom: 80px;
 
     .feature {
       max-width: 480px;
@@ -127,6 +220,48 @@ main .about  {
     }
   }
 
+  main .works {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    position: relative;
+  }
+
+  main .about {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 120px;
+    position: relative;
+  }
+
+  main .works {
+    padding: 0;
+  }
+
+  main .works img {
+    margin: 0;
+    scale: 1.2;
+    transform-origin: bottom;
+  }
+
+  main .about img {
+    margin: 0;
+  }
+
+  main .works h3, main .about h3 {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  main .works p, main .about p {
+    font-size: 20px;
+    max-width: 360px;
+    text-align: left;
+  }
+
+  .frequently-asked-questions {
+    max-width: 960px;
+  }
 }
 
 // ---------------------------------------------------------
@@ -138,5 +273,9 @@ main .about  {
     .feature {
       max-width: 280px;
     }
+  }
+
+  .frequently-asked-questions {
+    max-width: 1100px;
   }
 }
