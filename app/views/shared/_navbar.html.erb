@@ -8,12 +8,18 @@
   <% end %>
 
   <ul>
-    <li>
     <% if user_signed_in? %>
-      <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+      <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} do%>
+        <li>
+          Log Out
+        </li>
+      <% end %>
     <% else %>
-      <%= link_to "Login", new_user_session_path, id: "login-link" %>
+      <%= link_to new_user_session_path, id: "login-link" do %>
+        <li>
+          Login
+        </li>
+      <% end %>
     <% end %>
-    </li>
   </ul>
 </nav>
