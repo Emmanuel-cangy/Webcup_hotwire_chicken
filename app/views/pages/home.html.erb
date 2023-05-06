@@ -1,5 +1,7 @@
+<!-- -----------------------Navbar----------------------- -->
 <%= render "shared/navbar" %>
 
+<!-- -----------------------Header----------------------- -->
 <header>
   <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
   <%= image_tag("Header-img.png", :alt => "Header image") %>
@@ -7,6 +9,7 @@
 </header>
 
 <main>
+  <!-- -----------------------Features----------------------- -->
   <article class="features container">
     <div class="feature">
       <h3>Dream Directory</h3>
@@ -22,15 +25,91 @@
     </div>
   </article>
 
+  <!-- -----------------------Works----------------------- -->
   <article class="works">
+    <div class="container d-flex justify-content-evenly flex-wrap">
       <%= image_tag("user.png", :alt => "User browsing application") %>
-      <h3>It just <span>works</span></h3>
-      <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
+      <div class="content">
+        <h3>It just <span>works</span></h3>
+        <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
+      </div>
+    </div>
   </article>
 
+  <!-- -----------------------About----------------------- -->
+
   <article class="about">
+    <div class="container d-flex justify-content-evenly flex-row-reverse flex-wrap">
       <%= image_tag("user.png", :alt => "User browsing application") %>
-      <h3>Introducing <span>Onirix</span> most advanced system</h3>
-      <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
+      <div class="content">
+        <h3>Introducing <span>Onirix</span> most advanced system</h3>
+        <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- -----------------------F.A.Q----------------------- -->
+
+  <article class="frequently-asked-questions">
+    <div class='centerplease'>
+      Frequently Asked Questions
+    </div>
+
+    <div class="faq">
+      <div class="a">
+        <input type="checkbox" id="question1" name="q"  class="questions">
+        <div class="plus">+</div>
+        <label for="question1" class="question">
+          What documents do I need to rent a car?
+        </label>
+        <div class="answers">
+          To rent a car, you typically need a valid driver's license, a credit card in your name, and proof of insurance. Some rental companies may also require additional documentation such as a passport or proof of address.
+        </div>
+      </div>
+
+      <div class="a">
+        <input type="checkbox" id="question2" name="q" class="questions">
+        <div class="plus">+</div>
+        <label for="question2" class="question">
+          How old do I need to be to rent a car?
+        </label>
+        <div class="answers">
+          The age requirements for renting a car can vary by location and rental company, but generally, you need to be at least 21 years old. Drivers under 25 years old may be subject to additional fees or restrictions.
+        </div>
+      </div>
+
+      <div class="a">
+        <input type="checkbox" id="question3" name="q" class="questions">
+        <div class="plus">+</div>
+        <label for="question3" class="question">
+          Can I rent a car if I don't have a credit card?
+        </label>
+        <div class="answers">
+          Most rental companies require a credit card to secure the rental and for incidentals, but some may accept a debit card or cash deposit. Be sure to check with the rental company beforehand to see what their specific requirements are.
+        </div>
+      </div>
+
+      <div class="a">
+        <input type="checkbox" id="question4" name="q" class="questions">
+        <div class="plus">+</div>
+        <label for="question4" class="question">
+          What happens if I return the rental car late?
+        </label>
+        <div class="answers">
+          Returning the rental car late may result in additional fees or charges, depending on the rental company's policy. Some rental companies may also charge an hourly or daily rate for every hour or day that the car is returned late.
+        </div>
+      </div>
+
+      <div class="a">
+        <input type="checkbox" id="question5" name="q" class="questions">
+        <div class="plus">+</div>
+        <label for="question5" class="question">
+          Can I pick up and drop off the rental car at different locations?
+        </label>
+        <div class="answers">
+          Yes, some rental companies allow you to pick up and drop off the rental car at different locations, but this may incur additional fees or restrictions. Be sure to check with the rental company beforehand to see what their specific policies are.
+        </div>
+      </div>
+    </div>
   </article>
 </main>
