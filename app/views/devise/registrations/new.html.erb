@@ -1,27 +1,41 @@
-<div class="grid">
-  <h2>Onirix</h2>
+<div class="d-flex flex-column justify-content-center container-height-full">
+  <h2 class="text-center">Onirix</h2>
+  <p class="text-center">Sign Up</p>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
-    <%= f.error_notification %>
+  <div class="form-container">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+      <%= f.error_notification %>
 
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", placeholder: "Email" }%>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password", placeholder: "New password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password", placeholder: "Confirm password" } %>
+      </div>
+
+      <div class="form-actions mt-4">
+        <%= f.button :submit, "Sign Up", class: "login-btn" %>
+      </div>
+    <% end %>
+
+    <div class="d-flex justify-content-between">
+      <div class="special-border col-5"></div>
+      <p class="col-2 text-center separation-paragraph">OR</p>
+      <div class="special-border col-5"></div>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
 
-  <%= render "devise/shared/links" %>
+    <div class="d-flex justify-content-center">
+      <%- if controller_name != 'sessions' %>
+        <%= link_to "Log In", new_session_path(resource_name) %><br />
+      <% end %>
+    </div>
+  </div>
 </div>
