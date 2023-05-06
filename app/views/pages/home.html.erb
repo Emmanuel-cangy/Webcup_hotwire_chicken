@@ -1,3 +1,4 @@
+
 <!-- -----------------------Navbar----------------------- -->
 <%= render "shared/navbar" %>
 
@@ -5,7 +6,8 @@
 <header>
   <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
   <%= image_tag("Header-img.png", :alt => "Header image") %>
-  <a href="">Save your Dreams</a>
+  <%= link_to "Save your Dreams", new_user_registration_path, id: "login-link" %>
+  <%# <a href="">Save your Dreams</a> %>
 </header>
 
 <main>
@@ -42,7 +44,7 @@
     <%= image_tag("advert.jpeg", :alt => "Woman suffering from daily nightmares") %>
     <h3>"Are your nightmares affecting your daily life? Don't suffer in silence. Seek professional help today."</h3>
   </article>
-
+  
   <!-- -----------------------About----------------------- -->
 
   <article class="about">
