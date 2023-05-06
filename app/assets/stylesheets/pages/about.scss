@@ -1,0 +1,85 @@
+// ------------------------ About Header ------------------------
+.about-header {
+  overflow-y: hidden;
+  text-align: center;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .content {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    text-align: center;
+    color: $white;
+    position: absolute;
+    bottom: 10%;
+  }
+
+  .content h1, .content p {
+    text-shadow: 1px 1px 2px black;
+  }
+}
+
+.about-us-main {
+  margin: 0;
+}
+
+// ------------------------ About Who we are ------------------------
+
+.who-we-are, .commitments {
+  text-align: center;
+  color: $primary-color;
+  background-color: $white;
+
+  img {
+    width: 100%;
+  }
+
+  .content {
+    padding: 32px;
+  }
+
+  .content h3 {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 46px;
+  }
+}
+
+// ------------------------ Achievements ------------------------
+.achievement-title {
+  text-align: center;
+  color: $white;
+}
+
+@media screen and (min-width: 768px) {
+  .about-header {
+    max-height: 560px;
+  }
+
+  .who-we-are, .commitments {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-height: 640px;
+    overflow: hidden;
+  }
+
+  .commitments {
+    flex-direction: row;
+  }
+
+  .who-we-are img, .commitments img {
+    width: 50%;
+  }
+
+  .who-we-are .content, .commitments .content {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
