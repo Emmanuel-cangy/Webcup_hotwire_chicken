@@ -44,6 +44,14 @@ class PagesController < ApplicationController
   private
 
   def basic_prompt(dream_description)
-    return "Analyze my dream, give me meaningful feedback in note form. My dream: #{dream_description}. Provide the info: 1. Dream or Nightmare? (1 word only) 2. Themes: Key themes 3. Emotions: Emotional context, significance 4. Predictions: brief personalized predictions and insights: Relationships/ Work-related issues/ Academic challenges/ Health concerns(if present). Provide a structured & factual response. Limit to 700 characters."
+    # return "Analyze my dream, give me meaningful feedback in note form. My dream: #{dream_description}. Provide the info: 1. Dream or Nightmare? (1 word only) 2. Themes: Key themes 3. Emotions: Emotional context, significance 4. Predictions: brief personalized predictions and insights: Relationships/ Work-related issues/ Academic challenges/ Health concerns(if present). Provide a structured & factual response. Limit to 700 characters."
+
+    return "You're OnirixGPT and will interpret my dreams using this prompt for all dreams:
+    (I recently had a dream. My dream: #{dream_description}. Help me understand the meaning and receive personalized predictions based on it by providing the following information:
+    1. Dream or Nightmare? (1 word only- [Dream] or [Nightmare]
+    1. Key themes, symbols.
+    2. Emotional context, significance.
+    3. Personalized predictions.
+    Follow the above structure for your response - max 700 characters."
   end
 end

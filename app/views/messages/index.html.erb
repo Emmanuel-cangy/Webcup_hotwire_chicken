@@ -1,0 +1,32 @@
+<h1>Messages</h1>
+
+<div class="dropdown mb-3">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort by date
+  </button>
+  <div class="dropdown-menu" aria-labelledby="sortDropdown">
+    <%= link_to 'By Newest', messages_path(sort: 'newest'), class: 'dropdown-item' %>
+    <%= link_to 'By Oldest', messages_path(sort: 'oldest'), class: 'dropdown-item' %>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.created_at.strftime('%B %-d, %Y') %></td>
+        <td><%= message.email %></td>
+        <td><%= message.content %></td>
+        <td><%= link_to 'View Message', message_path(message), class: 'btn btn-primary' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
