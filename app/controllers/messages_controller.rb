@@ -8,7 +8,14 @@ class MessagesController < ApplicationController
   end
 
   def index
-    @messages = Message.all.order(created_at: :desc)
+    case params[:sort]
+    when 'newest'
+      @messages = Message.order(created_at: :desc)
+    when 'oldest'
+      @messages = Message.order(created_at: :asc)
+    else
+      @messages = Message.all
+    end
   end
 
   def new
@@ -22,6 +29,10 @@ class MessagesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @message = Message.find(params[:id])
   end
 
   private
