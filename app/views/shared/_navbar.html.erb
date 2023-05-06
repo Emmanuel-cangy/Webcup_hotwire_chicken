@@ -7,6 +7,10 @@
     <%= image_tag("onyrix-logo.png", :alt => "Onirix logo") %>
   <% end %>
 
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag("IIR-logo.svg", :alt => "L'institut International des Rêves logo") %>
+  <% end %>
+
   <ul>
     <% if user_signed_in? %>
       <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} do%>
