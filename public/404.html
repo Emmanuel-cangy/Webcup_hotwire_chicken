@@ -40,7 +40,7 @@
     }
 
     article p {
-      font-size: clamp(0.875rem, 3.6, 1.5rem);
+      font-size: 14px;
       line-height: 36px;
       margin-bottom: 40px;
     }
@@ -61,11 +61,19 @@
       main {
         padding: 40px 44px 60px 44px;
       }
+
+      article p {
+        font-size: 16px;
+      }
     }
 
     @media (min-width: 768px) {
       main img {
         max-width: 320px;
+      }
+
+      article p {
+        font-size: 18px;
       }
     }
 
@@ -85,8 +93,13 @@
       }
 
       main img {
-      max-width: 500px;
-    }
+        max-width: 500px;
+      }
+
+
+      article p {
+        font-size: 20px;
+      }
     }
 
   </style>
