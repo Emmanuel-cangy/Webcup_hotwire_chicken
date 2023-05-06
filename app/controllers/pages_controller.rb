@@ -28,7 +28,7 @@ class PagesController < ApplicationController
           max_tokens: 100
       })
 
-    answer = response['choices'][0]['text'].gsub(/\n/, '<br>')
+    answer = response['choices'][0]['text']
 
     respond_to do |format|
       if answer
@@ -44,6 +44,6 @@ class PagesController < ApplicationController
   private
 
   def basic_prompt(dream_description)
-    return "Analyze my dream, give me meaningful feedback in note form. My dream: #{dream_description}. Provide the info: 1. Themes: Key themes 2. Emotions: Emotional context, significance 3. Predictions: brief personalized predictions and insights: Relationships/ Work-related issues/ Academic challenges/ Health concerns(if present). Provide a structured & factual response. Limit to 700 characters."
+    return "Analyze my dream, give me meaningful feedback in note form. My dream: #{dream_description}. Provide the info: 1. Dream or Nightmare? (1 word only) 2. Themes: Key themes 3. Emotions: Emotional context, significance 4. Predictions: brief personalized predictions and insights: Relationships/ Work-related issues/ Academic challenges/ Health concerns(if present). Provide a structured & factual response. Limit to 700 characters."
   end
 end
