@@ -136,7 +136,7 @@ main .advert {
     width: 100%;
   }
 
-  p {
+  h3 {
     color: $white;
     text-align: center;
     margin: 24px auto;
@@ -307,6 +307,13 @@ footer {
     text-align: left;
   }
 
+  main .advert {
+
+    h3 {
+      max-width: 640px;
+    }
+  }
+
   .frequently-asked-questions {
     max-width: 960px;
   }
@@ -339,6 +346,21 @@ footer {
 
     .feature {
       max-width: 280px;
+    }
+  }
+
+  main .advert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      width: 50%;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 24px auto;
     }
   }
 
