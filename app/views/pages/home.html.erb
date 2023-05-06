@@ -6,7 +6,8 @@
 <header>
   <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
   <%= image_tag("Header-img.png", :alt => "Header image") %>
-  <a href="">Save your Dreams</a>
+  <%= link_to "Save your Dreams", new_user_registration_path, id: "login-link" %>
+  <%# <a href="">Save your Dreams</a> %>
 </header>
 
 <main>
@@ -38,11 +39,6 @@
   </article>
 
   <!-- -----------------------Advert----------------------- -->
-
-  <article class="advert">
-    <%= image_tag("nightmare.jpeg", :alt => "Woman suffering from daily nightmares") %>
-    <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
-  </article>
 
   <!-- -----------------------About----------------------- -->
 
