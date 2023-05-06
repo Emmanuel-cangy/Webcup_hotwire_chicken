@@ -1,1 +1,111 @@
 // Specific CSS for your home-page
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+header {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    word-wrap: break-word;
+    color: white;
+    margin-bottom: 64px;
+  }
+
+  img {
+    margin: 0 auto;
+    width: 320px;
+    margin-bottom: 36px;
+  }
+
+  a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 16px 24px;
+    background-color: black;
+    border-radius: 8px;
+  }
+}
+
+main {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .feature {
+    max-width: 280px;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .feature p, .feature h3 {
+    text-align: center;
+  }
+
+  .feature h3{
+    font-weight: 600;
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+
+  .feature p{
+    margin-bottom: 40px;
+  }
+}
+
+main .works, main .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #E6E6FA;
+  color: $primary-color;
+  padding: 30px 0;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+    width: 190px;
+  }
+
+  h3 {
+    margin: 32px auto 0 auto;
+    font-size: 34px;
+    margin-bottom: 28px;
+    max-width: 280px;
+  }
+
+  h3 span {
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+}
+
+main .about  {
+  background-color: $primary-color;
+  color: white;
+  border-bottom: 1px solid white;
+}

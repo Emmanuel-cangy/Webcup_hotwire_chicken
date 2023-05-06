@@ -1,2 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "shared/navbar" %>
+
+<header>
+  <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
+  <%= image_tag("Header-img.png", :alt => "Header image") %>
+  <a href="">Save your Dreams</a>
+</header>
+
+<main>
+  <article class="features">
+    <div class="feature">
+      <h3>Dream Directory</h3>
+      <p>A searchable dream dictionary that allows users to look up common dream symbols and their potential meanings.</p>
+    </div>
+    <div class="feature">
+      <h3>Dream Journal</h3>
+      <p>A feature that allows users to keep a record of their dreams over time, and track patterns or recurring symbols in their dreams.</p>
+    </div>
+    <div class="feature">
+      <h3>Interpretations</h3>
+      <p>A service that offers personalized dream interpretations from professional dream analysts or psychologists.</p>
+    </div>
+  </article>
+
+  <article class="works">
+      <%= image_tag("user.png", :alt => "User browsing application") %>
+      <h3>It just <span>works</span></h3>
+      <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
+  </article>
+
+  <article class="about">
+      <%= image_tag("user.png", :alt => "User browsing application") %>
+      <h3>Introducing <span>Onirix</span> most advanced system</h3>
+      <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
+  </article>
+</main>
