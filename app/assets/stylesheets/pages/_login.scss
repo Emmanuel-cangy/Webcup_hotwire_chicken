@@ -47,7 +47,7 @@
 }
 
 .form-container {
-  width: clamp(300px, 50%, 500px);
+  width: clamp(200px, 50%, 500px);
   margin: 0 auto;
 }
 
@@ -69,6 +69,8 @@
 }
 
 .controls {
+  flex-wrap: wrap;
+
   a {
     color: gray;
   }
