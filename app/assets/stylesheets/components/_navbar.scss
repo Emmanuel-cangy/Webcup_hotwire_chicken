@@ -68,3 +68,10 @@ nav {
     gap: 1rem;
   }
 }
+
+@media (max-width: 1200px) {
+  nav ul li {
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+  }
+}
