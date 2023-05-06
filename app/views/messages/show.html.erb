@@ -1,8 +1,6 @@
-<h1>Message from <%= @message.email %></h1>
-<p><%= @message.content %></p>
-<%= link_to 'Back', messages_path, class: 'btn btn-secondary' %>
-
-<h1>Message from <%= @message.email %></h1>
-<p><strong>Date:</strong> <%= @message.created_at.strftime('%B %-d, %Y') %></p>
-<p><%= @message.content %></p>
-<%= link_to 'Back', messages_path, class: 'btn btn-secondary' %>
+<div>
+  <h1>Message from <%= @message.email %></h1>
+  <p><strong>Date:</strong> <%= @message.created_at.strftime('%B %-d, %Y') %></p>
+  <p><%= @message.content %></p>
+  <%= link_to 'Back', messages_path, class: 'btn btn-secondary' %>
+</div>
