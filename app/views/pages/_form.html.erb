@@ -1,4 +1,6 @@
+<%= render "shared/navbar" %>
+
 <%= form_with url: ask_path, method: :post, class: "d-flex flex-column", data: { "ask_ai_target": "form" , action: "submit->ask-ai#send"} do |f| %>
-  <%= f.text_area :query, class: "form-control",data: { ask_ai_target: 'dream' }, placeholder: "Enter your dream" %>
+  <%= f.text_area :query, class: "form-control", maxlength: (user_signed_in? ? 300 : 150), data: { ask_ai_target: 'dream' }, placeholder: "Enter your dream" %>
   <%= f.submit "Ask Onirix", class: "btn btn-primary" %>
 <% end %>
