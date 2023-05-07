@@ -26,8 +26,8 @@
   <!-- -----------------------Header----------------------- -->
   <header >
     <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
-    <%= image_tag("g10.svg", :alt => "Header image") %>
-    <%= link_to "Save your Dreams", new_user_registration_path, id: "login-link" %>
+    <a href="#ask-ai">Interprete your Dreams</a>
+
     <%# <a href="">Save your Dreams</a> %>
   </header>
 
@@ -82,13 +82,13 @@
   <article class="dream-interpretation">
     <div class="container">
       <h2 class="text-center mb-4">Dream Interpretation</h2>
-  
+
       <div data-controller="ask-ai">
         <%= form_with url: ask_path, method: :post, class: "d-flex flex-column", data: { "ask_ai_target": "form" , action: "submit->ask-ai#send"} do |f| %>
           <%= f.text_area :query, class: "form-control mb-3", minlength: 30, maxlength: (user_signed_in? ? 300 : 150), data: { ask_ai_target: 'dream' }, placeholder: "Enter your dream" %>
           <%= f.submit "Ask Onirix", class: "btn btn-primary mb-4", data: { ask_ai_target: 'button' } %>
         <% end %>
-  
+
         <div id="answer" data-ask-ai-target="answer" class="d-flex flex-column align-items-center">
         </div>
       </div>
