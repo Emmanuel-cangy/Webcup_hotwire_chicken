@@ -66,7 +66,7 @@
           }
         });
       });
-      return resultHtml;
+      return `<div class='dream-details'>${resultHtml}</div>`;
     }
 
     capitalizeFirstLetter(word) {
