@@ -13,16 +13,19 @@
 
   <ul>
     <% if user_signed_in? %>
-      <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} do%>
-        <li>
-          Log Out
-        </li>
-      <% end %>
+      <div class="d-flex">
+        <% if current_user.admin %>
+          <%= link_to messages_path, class: "dropdown-item", style: "margin-right:1rem;" do %>
+            <li>Messages</li>
+          <% end %>
+        <% end %>
+        <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} do%>
+          <li>Log Out</li>
+        <% end %>
+      </div>
     <% else %>
       <%= link_to new_user_session_path, id: "login-link" do %>
-        <li>
-          Login
-        </li>
+        <li>Login</li>
       <% end %>
     <% end %>
   </ul>
