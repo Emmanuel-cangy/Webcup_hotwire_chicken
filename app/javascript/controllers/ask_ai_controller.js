@@ -46,28 +46,40 @@
       let resultHtml = "";
 
       if (isNightmare) {
-        resultHtml += "<p>Your had a nightmare.</p>";
+        resultHtml += "<p>You had a nightmare.</p>";
         resultHtml += this.checkResult(splitResponse, ['theme', 'emotion']);
         resultHtml += "<p>Consult a professional to sleep better.</p>";
       } else {
         resultHtml += "<p>You had a sweet dream.</p>";
         resultHtml += this.checkResult(splitResponse, ['theme', 'emotion', 'prediction']);
       }
+
+      resultHtml = `<div class="results-container">${resultHtml}</div>`;
       this.answerTarget.innerHTML = resultHtml;
-      this.buttonTarget.removeAttribute('disabled')
+      this.buttonTarget.removeAttribute('disabled');
     }
 
     checkResult(splitResponse, sections) {
       let resultHtml = "";
+      let verticalCards = "";
+      let horizontalCard = "";
+
       splitResponse.forEach((item) => {
         sections.forEach((word) => {
           if (item.split(":")[0].toLowerCase().includes(word)) {
-            resultHtml += `<div class="dream-${word}"><strong>${this.capitalizeFirstLetter(word)}:</strong><span class="dream-info">${item.split(":")[1]}</span></div>`;
+            if (word === 'prediction') {
+              horizontalCard = `<div class="card horizontal-card mb-3"><div class="card-body"><h5 class="card-title">${this.capitalizeFirstLetter(word)}</h5><p class="card-text dream-info">${item.split(":")[1]}</p></div></div>`;
+            } else {
+              verticalCards += `<div class="card vertical-card mb-3"><div class="card-body"><h5 class="card-title">${this.capitalizeFirstLetter(word)}</h5><p class="card-text dream-info">${item.split(":")[1]}</p></div></div>`;
+            }
           }
         });
       });
-      return `<div class='dream-details'>${resultHtml}</div>`;
+
+      resultHtml = `<div class="vertical-cards">${verticalCards}</div>${horizontalCard}`;
+      return resultHtml;
     }
+
 
     capitalizeFirstLetter(word) {
       return word.charAt(0).toUpperCase() + word.slice(1);
