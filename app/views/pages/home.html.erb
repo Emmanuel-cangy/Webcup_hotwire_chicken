@@ -1,14 +1,34 @@
 
-<!-- -----------------------Navbar----------------------- -->
-<%= render "shared/navbar" %>
+<!------------------------Star Animation------------------------------>
+<div class="night">
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+</div>
 
-<!-- -----------------------Header----------------------- -->
-<header>
-  <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
-  <%= image_tag("Header-img.png", :alt => "Header image") %>
-  <%= link_to "Save your Dreams", new_user_registration_path, id: "login-link" %>
-  <%# <a href="">Save your Dreams</a> %>
-</header>
+
+<div class="night2">
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+</div>
+
+<div class="bg-cover">
+<!-- -----------------------Navbar----------------------- -->
+  <%= render "shared/navbar" %>
+
+  <!-- -----------------------Header----------------------- -->
+  <header >
+    <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
+    <%= image_tag("Header-img.png", :alt => "Header image") %>
+    <%= link_to "Save your Dreams", new_user_registration_path, id: "login-link" %>
+    <%# <a href="">Save your Dreams</a> %>
+  </header>
+</div>
 
 <main>
   <!-- -----------------------Features----------------------- -->
@@ -29,8 +49,8 @@
 
   <!-- -----------------------Works----------------------- -->
   <article class="works">
-    <div class="container d-flex justify-content-evenly flex-wrap">
-      <%= image_tag("user.png", :alt => "User browsing application") %>
+    <div class="container d-flex justify-content-end py-5 relative">
+      <%= image_tag("IIR-logo.svg", :alt => "L'institut International des Rêves logo", class: "img-logo-works") %>
       <div class="content">
         <h3>It just <span>works</span></h3>
         <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>
