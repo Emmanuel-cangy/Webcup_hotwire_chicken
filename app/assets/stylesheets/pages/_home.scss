@@ -229,7 +229,9 @@ main .advert {
 
 // ---------------------------- Dreamed ----------------------------
 .dream-interpretation {
-  margin-bottom: 2rem;
+  padding: 2rem;
+  border: 1px #2f2b60 solid;
+  border-radius: 10px;
   width: clamp(200px, 70%, 1050px);
   margin: 0 auto;
   & h2 {
