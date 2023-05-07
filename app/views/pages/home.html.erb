@@ -17,31 +17,32 @@
   <div class="star"></div>
 </div>
 
-<div class="bg-cover">
+<div class="bg-cover"></div>
+
+
 <!-- -----------------------Navbar----------------------- -->
-  <%= render "shared/navbar" %>
+<%= render "shared/navbar" %>
 
   <!-- -----------------------Header----------------------- -->
   <header >
     <h1>“Unlock the mysteries of <br> your subconsious with our <br> dream interpretation.”</h1>
-    <%= image_tag("Header-img.png", :alt => "Header image") %>
+    <%= image_tag("g10.svg", :alt => "Header image") %>
     <%= link_to "Save your Dreams", new_user_registration_path, id: "login-link" %>
     <%# <a href="">Save your Dreams</a> %>
   </header>
-</div>
 
 <main>
   <!-- -----------------------Features----------------------- -->
   <article class="features container">
-    <div class="feature">
+    <div class="feature ft-1">
       <h3>Dream Directory</h3>
       <p>A searchable dream dictionary that allows users to look up common dream symbols and their potential meanings.</p>
     </div>
-    <div class="feature">
+    <div class="feature ft-2">
       <h3>Dream Journal</h3>
       <p>A feature that allows users to keep a record of their dreams over time, and track patterns or recurring symbols in their dreams.</p>
     </div>
-    <div class="feature">
+    <div class="feature ft-3">
       <h3>Interpretations</h3>
       <p>A service that offers personalized dream interpretations from professional dream analysts or psychologists.</p>
     </div>
@@ -49,8 +50,8 @@
 
   <!-- -----------------------Works----------------------- -->
   <article class="works">
-    <div class="container d-flex justify-content-end py-5 relative">
-      <%= image_tag("IIR-logo.svg", :alt => "L'institut International des Rêves logo", class: "img-logo-works") %>
+    <%= image_tag("IIR-logo.svg", :alt => "L'institut International des Rêves logo", class: "img-logo-works") %>
+    <div class="container py-5 relative">
       <div class="content">
         <h3>It just <span>works</span></h3>
         <p>Users submit dream details via a web form. The website's algorithm or experts analyze and deliver an interpretation via email or web page, with additional resources available.</p>

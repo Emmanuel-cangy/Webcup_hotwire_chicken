@@ -28,6 +28,27 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  nav {
+    margin: 2rem auto;
+    margin-bottom: 40px;
+
+    & .navbar-brand img {
+      height: 60px;
+    }
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & ul li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
 .clouds {
   position: absolute;
   left: -15%;
