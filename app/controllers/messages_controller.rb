@@ -25,7 +25,9 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to root_path, notice: 'Message sent successfully.'
+      redirect_to root_path
+      flash[:notice] = "Your message has been sent. We will get back to you within 3 working days."
+      flash[:fade_time] = 3000
     else
       render :new
     end

@@ -8,6 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <script>
+      $(document).ready(function() {
+        $(".alert").fadeIn("slow").delay(<%= flash[:fade_time] || 5000 %>).fadeOut("slow");
+      });
+    </script>
   </head>
 
   <body>
