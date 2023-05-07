@@ -17,12 +17,13 @@
     bottom: 10%;
   }
 
-  .content h1, .content p {
+  .content h1,
+  .content p {
     text-shadow: 1px 1px 2px black;
   }
 }
 
-.about {
+.about-us-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,9 +34,7 @@
   background-repeat: no-repeat;
   background-image: url(asset-path("about-us-header.jpg"));
   background-size: cover;
-
 }
-
 
 .about-us-main {
   margin: 0;
@@ -43,7 +42,8 @@
 
 // ------------------------ About Who we are ------------------------
 
-.who-we-are, .commitments {
+.who-we-are,
+.commitments {
   text-align: center;
   color: $primary-color;
   background-color: $white;
@@ -74,7 +74,8 @@
     max-height: 560px;
   }
 
-  .who-we-are, .commitments {
+  .who-we-are,
+  .commitments {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -88,11 +89,13 @@
     flex-direction: row;
   }
 
-  .who-we-are img, .commitments img {
+  .who-we-are img,
+  .commitments img {
     width: 50%;
   }
 
-  .who-we-are .content, .commitments .content {
+  .who-we-are .content,
+  .commitments .content {
     max-width: 500px;
     margin: 0 auto;
   }
