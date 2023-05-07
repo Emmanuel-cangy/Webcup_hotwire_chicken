@@ -18,7 +18,7 @@ body {
   z-index: -2;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(asset-path("galaxy.jpg"));
+  background-image: url(asset-path("banner-medium.jpg"));
   background-size: cover;
 }
 
@@ -55,6 +55,12 @@ header {
     padding: 16px 24px;
     background-color: black;
     border-radius: 8px;
+
+    &:hover {
+      background-color: rgb(15, 15, 15);
+      color: $white;
+      text-decoration: none;
+    }
   }
 }
 
