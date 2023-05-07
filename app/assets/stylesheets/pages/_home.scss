@@ -1,5 +1,5 @@
 // Specific CSS for your home-page
-*{
+* {
   box-sizing: border-box;
   margin: 0;
 }
@@ -9,6 +9,15 @@ body {
   overflow-x: hidden;
 }
 
+.bg-cover {
+  position: relative;
+  z-index: -2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(asset-path("nasa-rTZW4f02zY8-unsplash.jpg"));
+  background-size: cover;
+}
+
 // ---------------------------- header ----------------------------
 
 header {
@@ -16,6 +25,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
 
   h1 {
     font-weight: 600;
@@ -68,28 +78,29 @@ main .features {
     color: $white;
   }
 
-  .feature p, .feature h3 {
+  .feature p,
+  .feature h3 {
     text-align: center;
   }
 
-  .feature h3{
+  .feature h3 {
     font-weight: 600;
     font-size: 34px;
     margin-bottom: 28px;
   }
 
-  .feature p{
+  .feature p {
     margin-bottom: 40px;
   }
 }
 
-main .works, main .about {
+main .works,
+main .about {
   justify-content: center;
-  background-color: #E6E6FA;
+  background-color: #e6e6fa;
   color: $primary-color;
   padding: 42px 0;
   text-align: center;
-
 
   h3 {
     margin: 32px auto 0 auto;
@@ -109,21 +120,24 @@ main .works, main .about {
 }
 
 main .works {
-
   img {
     margin: 0 auto;
     width: 190px;
   }
 }
 
-main .about  {
+main .about {
   margin-bottom: 60px;
-
 
   img {
     mix-blend-mode: difference;
     width: 300px;
   }
+}
+
+.img-logo-works {
+  width: 190px;
+  margin: 0 auto;
 }
 
 // ---------------------------- Advert ----------------------------
@@ -183,13 +197,13 @@ main .advert {
     z-index: -1;
     position: relative;
     opacity: 0;
-    -webkit-transition: .250s ease;
-    -moz-transition: .250s ease;
-    -o-transition: .250s ease;
-    transition: .250s ease;
+    -webkit-transition: 0.25s ease;
+    -moz-transition: 0.25s ease;
+    -o-transition: 0.25s ease;
+    transition: 0.25s ease;
   }
 
-  .questions:checked ~ .answers{
+  .questions:checked ~ .answers {
     height: auto;
     opacity: 1;
     padding: 15px 42px 25px 0;
@@ -213,10 +227,10 @@ main .advert {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    -webkit-transition: .250s ease;
-    -moz-transition: .250s ease;
-    -o-transition: .250s ease;
-    transition: .250s ease;
+    -webkit-transition: 0.25s ease;
+    -moz-transition: 0.25s ease;
+    -o-transition: 0.25s ease;
+    transition: 0.25s ease;
   }
 
   .questions:checked ~ .plus {
@@ -234,7 +248,7 @@ main .advert {
 // ---------------------------- Footer ----------------------------
 
 footer {
-  background-color: #242A45;
+  background-color: #242a45;
   padding: 32px;
 
   .content {
@@ -287,28 +301,34 @@ footer {
   }
 
   main .works img {
+    position: absolute;
+    top: 50%;
+    left: 35%;
     margin: 0;
-    scale: 1.2;
     transform-origin: bottom;
+    /* height: 298px; */
+    transform: translate(-50%, -50%);
+    width: 500px;
   }
 
   main .about img {
     margin: 0;
   }
 
-  main .works h3, main .about h3 {
+  main .works h3,
+  main .about h3 {
     text-align: left;
     margin-left: 0;
   }
 
-  main .works p, main .about p {
+  main .works p,
+  main .about p {
     font-size: 20px;
     max-width: 360px;
     text-align: left;
   }
 
   main .advert {
-
     h3 {
       max-width: 640px;
     }
@@ -319,7 +339,6 @@ footer {
   }
 
   footer {
-
     .content {
       margin: 0 auto;
       max-width: 928px;
