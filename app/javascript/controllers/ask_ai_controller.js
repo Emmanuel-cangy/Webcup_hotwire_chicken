@@ -23,11 +23,12 @@ export default class extends Controller {
         // then remove empty strings from array and trim each item
         console.log(data.answer)
         // const dreamIndex = data.answer.indexOf("Dream")
-        const themeIndex = data.answer.indexOf("Themes")
-        const emotionIndex = data.answer.indexOf("Emotion")
-        const predictionIndex = data.answer.indexOf("Predictions")
+        const noNumbersAnswer = data.answer.replace(/\d+/g, '')
+        const themeIndex = noNumbersAnswer.indexOf("Themes")
+        const emotionIndex = noNumbersAnswer.indexOf("Emotion")
+        const predictionIndex = noNumbersAnswer.indexOf("Predictions")
 
-        const results = this.splitTheResponse(data.answer, themeIndex, emotionIndex, predictionIndex)
+        const results = this.splitTheResponse(noNumbersAnswer, themeIndex, emotionIndex, predictionIndex)
         const betterResults = results.map(item => item.replaceAll('\n', '').trim()).filter(item => item !== "")
         this.displayResult(betterResults);
       })
