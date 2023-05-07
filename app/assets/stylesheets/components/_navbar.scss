@@ -49,15 +49,22 @@ nav {
   }
 }
 
-.clouds {
-  position: absolute;
-  left: -15%;
-  z-index: -1;
-}
+// .clouds {
+//   position: absolute;
+//   left: -15%;
+//   z-index: -1;
+// }
 
 .navbar-links {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
