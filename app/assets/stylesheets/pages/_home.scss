@@ -158,6 +158,22 @@ main .advert {
   }
 }
 
+// ---------------------------- Advert ----------------------------
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vertical-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-card {
+  flex-basis: 100%;
+}
+
 // ---------------------------- F.A.Q ----------------------------
 
 .frequently-asked-questions {
