@@ -1,9 +1,12 @@
 require "openai"
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :ask, :testing ]
+  skip_before_action :authenticate_user!, only: [ :home, :ask, :testing, :about ]
 
   def home
+  end
+
+  def about
   end
 
   def testing

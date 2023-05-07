@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :new, :create]
+
   before_action :authenticate_admin, only: [:index, :show]
 
   def authenticate_admin
@@ -29,7 +31,7 @@ class MessagesController < ApplicationController
       flash[:notice] = "Your message has been sent. We will get back to you within 3 working days."
       flash[:fade_time] = 3000
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
