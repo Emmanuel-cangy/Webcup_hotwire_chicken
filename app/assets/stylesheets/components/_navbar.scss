@@ -22,8 +22,8 @@ nav {
 
   & ul li {
     list-style: none;
-    padding: 12px 32px;
-    background-color: #ffdd00;
+    padding: 0px 10px;
+    background-color: #ffdd0000;
     border-radius: 8px;
   }
 }
@@ -53,4 +53,11 @@ nav {
   position: absolute;
   left: -15%;
   z-index: -1;
+}
+
+.navbar-links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
 }

@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     post :reply, on: :member
   end
   get 'contact_us', to: 'messages#new', as: :contact_us
-  get 'about', to: 'pages#about'
+  get 'about', to: 'pages#about', as: :about
 end
