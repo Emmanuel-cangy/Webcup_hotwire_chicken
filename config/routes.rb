@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "testing", to: "pages#testing", as: :testing
   post "ask", to: "pages#ask", as: :ask
 
-  resources :messages, only: [:new, :create, :index, :show] do
+  resources :messages, only: [:create, :index, :show] do
     post :reply, on: :member
   end
   get 'contact_us', to: 'messages#new', as: :contact_us
