@@ -18,7 +18,7 @@ body {
   z-index: -2;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(asset-path("nasa-rTZW4f02zY8-unsplash.jpg"));
+  background-image: url(asset-path("galaxy.jpg"));
   background-size: cover;
 }
 
@@ -221,20 +221,90 @@ main .advert {
 
 // ---------------------------- Advert ----------------------------
 
+// ---------------------------- Dreamed ----------------------------
+.dream-interpretation {
+  margin-bottom: 2rem;
+  width: clamp(200px, 70%, 1050px);
+  margin: 0 auto;
+  & h2 {
+    color: white;
+  }
+}
+
+.ask-ai {
+  & input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.3rem;
+    border: none;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  & textarea {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 0.3rem;
+    border: none;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}
+
+.dream-theme {
+  background-color: #e6e6fa;
+  display: inherit;
+  padding: 0.5rem 0.75rem;
+}
+.dream-emotion {
+  background-color: #e6e6fa;
+  display: inherit;
+  padding: 0.5rem 0.75rem;
+}
+.dream-prediction {
+  background-color: #e6e6fa;
+  display: inherit;
+  padding: 0.5rem 0.75rem;
+}
+
 .results-container {
-  display: flex;
-  flex-wrap: wrap;
-}
+  display: grid;
 
-.vertical-cards {
-  display: flex;
-  flex-direction: column;
-}
+  & p {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+  }
 
-.horizontal-card {
-  flex-basis: 100%;
-}
+  & p:last-child {
+    font-size: 1.5rem;
+    background-color: #e6e6fa;
+    color: black;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 
+  .dream-details {
+    display: inherit;
+    gap: 1rem;
+
+    & strong {
+      text-align: center;
+    }
+
+    & span {
+      text-align: center;
+    }
+
+    & div {
+      border-radius: 0.3rem;
+    }
+  }
+}
 // ---------------------------- F.A.Q ----------------------------
 
 .frequently-asked-questions {
@@ -429,6 +499,57 @@ footer {
       margin: 0;
     }
   }
+
+  .dream-theme {
+    background-color: #e6e6fa;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: inherit;
+  }
+  .dream-emotion {
+    background-color: #e6e6fa;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: inherit;
+  }
+  .dream-prediction {
+    background-color: #e6e6fa;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: inherit;
+  }
+  .dream {
+    background-color: #e6e6fa;
+  }
+
+  .results-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & p {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    .dream-details {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      display: inherit;
+      gap: 1rem;
+
+      & strong {
+        text-align: center;
+      }
+
+      & span {
+        text-align: center;
+      }
+
+      & div {
+        border-radius: 0.3rem;
+      }
+    }
+  }
 }
 
 // ---------------------------------------------------------
@@ -463,5 +584,61 @@ footer {
 
   footer .content {
     max-width: 1058px;
+  }
+
+  // .grid-dreams {
+  //   display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
+
+  .dream-theme {
+    background-color: #e6e6fa;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: inherit;
+  }
+  .dream-emotion {
+    background-color: #e6e6fa;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: inherit;
+  }
+  .dream-prediction {
+    background-color: #e6e6fa;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: inherit;
+  }
+  .dream {
+    background-color: #e6e6fa;
+  }
+
+  .results-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & p {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    .dream-details {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      display: inherit;
+      gap: 1rem;
+
+      & strong {
+        text-align: center;
+      }
+
+      & span {
+        text-align: center;
+      }
+
+      & div {
+        border-radius: 0.3rem;
+      }
+    }
   }
 }
