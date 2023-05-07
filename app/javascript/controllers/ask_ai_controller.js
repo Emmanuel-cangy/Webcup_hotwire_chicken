@@ -21,11 +21,24 @@
         .then((data) => {
           // replace all \n from answer into '.' to be able to separate in arrays.
           // then remove empty strings from array and trim each item
-          const splitResponse = data.answer.replaceAll('\n', '.').split(".")
-            .filter(item => item !== "").map(item => item.trim());
-          console.log(splitResponse);
-          this.displayResult(splitResponse);
+          // console.log(data)
+          // const dreamIndex = data.answer.indexOf("Dream")
+          const themeIndex = data.answer.indexOf("Themes")
+          const emotionIndex = data.answer.indexOf("Emotion")
+          const predictionIndex = data.answer.indexOf("Predictions")
+
+          const results = this.splitTheResponse(data.answer, themeIndex, emotionIndex, predictionIndex)
+          const betterResults = results.map(item => item.replaceAll('\n', '').trim()).filter(item => item !== "")
+          this.displayResult(betterResults);
         })
+    }
+
+    splitTheResponse(answer, themeIndex, emotionIndex, predictionIndex) {
+      const dream = answer.slice(0, themeIndex)
+      const theme = answer.slice(themeIndex, emotionIndex)
+      const emotion = answer.slice(emotionIndex, predictionIndex)
+      const prediction = answer.slice(predictionIndex, -1)
+      return [dream, theme, emotion, prediction]
     }
 
     displayResult(splitResponse) {
@@ -53,7 +66,7 @@
           }
         });
       });
-      return resultHtml;
+      return `<div class='dream-details'>${resultHtml}</div>`;
     }
 
     capitalizeFirstLetter(word) {
